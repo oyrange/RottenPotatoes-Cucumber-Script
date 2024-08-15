@@ -26,12 +26,12 @@ Scenario: restrict to movies with "PG" or "R" ratings
   When I am on the RottenPotatoes home page
   And I check the following ratings: PG, R
   And I uncheck the following ratings: G, PG-13
-  And I press "submit"
-  Then I should see the following movies: The Terminator, When Harry Met Sally, Amelie, The Incredibles, Raiders of the Lost Ark"
+  And I press "Refresh"
+  Then I should see the following movies: The Terminator, When Harry Met Sally, Amelie, The Incredibles, Raiders of the Lost Ark
   And I should not see the following movies: Aladdin, The Help
 
 Scenario: all ratings selected
   When I am on the RottenPotatoes home page
   And I check the following ratings: G, PG, PG-13, R
-  And I press "submit"
+  And I press "Refresh"
   Then I should see all the movies
